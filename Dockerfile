@@ -10,8 +10,8 @@ COPY scripts/install-trt-llm.sh /root
 
 ENV CUDA_ARCH=${CUDA_ARCH}
 
-RUN bash scripts/install-deps.sh && rm install-deps.sh
-RUN bash scripts/install-trt-llm.sh && rm install-trt-llm.sh
+RUN bash install-deps.sh && rm install-deps.sh
+RUN bash install-trt-llm.sh && rm install-trt-llm.sh
 
 # Stage 2: Continuation from the builder stage
 FROM builder as base
