@@ -1,9 +1,9 @@
 #!/bin/bash -e
 
 ## Clone this repo and install requirements
-[ -d "voice-proto" ] || git clone https://github.com/anilali/urban-succotash.git
+[ -d "WhisperFusion" ] || git clone https://github.com/collabora/WhisperFusion.git
 
-cd voice-proto
+cd WhisperFusion
 apt update
 apt install ffmpeg portaudio19-dev -y
 
