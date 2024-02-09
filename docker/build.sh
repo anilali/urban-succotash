@@ -11,11 +11,11 @@ fi
 
 (
   cd base-image &&
-  docker build $ARGS $BASE_IMAGE_BUILD_ARG -t ghcr.io/collabora/whisperfusion-base:latest .
+  docker build $ARGS $BASE_IMAGE_BUILD_ARG -t voice-proto-base:latest .
 )
 
 mkdir -p scratch-space
 cp -r scripts/build-* scratch-space
-docker run --gpus all --shm-size 64G -v "$PWD"/scratch-space:/root/scratch-space -w /root/scratch-space -it ghcr.io/collabora/whisperfusion-base:latest ./build-models.sh
+docker run --gpus all --shm-size 64G -v "$PWD"/scratch-space:/root/scratch-space -w /root/scratch-space -it voice-proto-base:latest ./build-models.sh
 
-docker build $ARGS -t ghcr.io/collabora/whisperfusion:latest .
+docker build $ARGS -t voice-proto .
