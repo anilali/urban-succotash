@@ -1,4 +1,4 @@
-FROM ghcr.io/collabora/whisperfusion-base:latest as base
+FROM voice-proto:latest as base
 
 WORKDIR /root
 COPY scripts/setup-whisperfusion.sh scripts/run-whisperfusion.sh scratch-space/models /root/
