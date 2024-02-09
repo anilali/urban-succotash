@@ -10,7 +10,7 @@ if [ "$1" != "mistral" ]; then
                   --phi_tokenizer_path /root/dolphin-2_6-phi-2/tokenizer
 else
   exec python3 main.py --mistral \
-                  --whisper_tensorrt_path /root/models/whisper_small_en \
-                  --mistral_tensorrt_path /root/models/mistral \
+                  --whisper_tensorrt_path /root/whisper_small_en \
+                  --mistral_tensorrt_path /root/mistral \
                   --mistral_tokenizer_path teknium/OpenHermes-2.5-Mistral-7B
 fi
